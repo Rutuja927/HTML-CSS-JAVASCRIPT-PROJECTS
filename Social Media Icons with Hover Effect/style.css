@@ -1,1 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #f1f9ff;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .container h1{
+            font-size: 40px;
+            line-height: 5;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 300;
+        }
+
+        .social{
+            display: flex;
+            gap: 30px;
+        }
+
+        .social a{
+            position: relative;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+            background: linear-gradient(145deg, #ffffff, #d9e0e6);
+            box-shadow: inset 6px 6px 14px #8e9396,
+                    inset -6px -6px 14px #ffffff;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        .social a .fa-brands{
+            position: relative;
+            font-size: 30px;
+            line-height: 80px;
+            z-index: 2;
+            transition: color 0.5s;
+            
+        }
+
+        .social a::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: -90px;
+            left: 0;
+            background: linear-gradient(-45deg, #12c2e9, #c471ed, #f64f59);
+            position: absolute;
+            border-radius: 25px;
+            transition: 0.5s ease;
+        }
+
+        .social a:hover::after{
+            top: 0;
+        }
+
+        .social a:hover .fa-brands{
+            color: #fff;
+            text-shadow:  1px 2px 14px #8e93969c,
+                    -1px -2px 14px #ffffffb7;
+        }

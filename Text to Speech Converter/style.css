@@ -1,1 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #0000FF;
+}
 
+
+        .container-box{
+            width: 25%;
+            background-color: white;
+            padding: 60px;
+            border-radius: 5px;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 5px 5px 5px black;
+        }
+
+        h2{
+            font-family: 'Gabarito', sans-serif;
+        }
+
+        h3{
+            font-family: 'AR One Sans', sans-serif;
+            font-size: 1rem;
+            color: darkgrey;
+        }
+
+        .input-field{
+            padding-top: 30px;
+            margin: 5px;
+        }
+
+
+                
+        textarea{
+            width: 300px;
+            height: 150px;
+            padding: 10px;
+            background-color: white;
+            border: 2px solid gray;
+            font-family: 'Gabarito', sans-serif;
+            outline: none;
+            resize: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        
+
+        .btn{ 
+            padding-top: 25px;
+        }
+
+        button{
+            width: 200px;
+            background-color: black;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: white;
+            padding: 10px;
+            font-family: 'AR One Sans', sans-serif; 
+            transition: 0.5s ease;
+        }
+
+        button:hover{
+            background-color: #0000FF;
+            color: white;
+        }

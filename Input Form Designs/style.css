@@ -1,1 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            gap: 30px;
+            background-color: #25252b;
+        }
+
+        .box{
+            position: relative;
+            width: 250px;
+        }
+
+        .box input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ffffff40;
+            background-color: #25252b;
+            border-radius: 5px;
+            outline: none;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        .box span{
+            position: absolute;
+            left: 0;
+            padding: 10px;
+            pointer-events: none;
+            font-size: 1em;
+            color: rgba(255, 255, 255, 0.25);
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            transition: 0.5s;
+        }
+
+        .box input:valid ~ span,
+        .box input:focus ~ span{
+            color: green;
+            transform: translateX(10px) translateY(-7px);
+            font-size: 0.65em;
+            padding: 0 10px;
+            background-color: #25252b;
+            border-left: 1px solid green;
+            border-right: 1px solid green;
+        }
+
+        .box:nth-child(2) input:valid ~ span,
+        .box:nth-child(2) input:focus ~ span{
+            color: #25252b;
+            background-color: green;
+            border-radius: 5px;
+        }
+
+        .box:nth-child(3) input:valid ~ span,
+        .box:nth-child(3) input:focus ~ span{
+            border: 1px solid green;
+            border-radius: 5px;
+        }
+
+        .box:nth-child(4) input:valid ~ span,
+        .box:nth-child(4) input:focus ~ span{
+            border-top: 1px solid green;
+            border-bottom: 1px solid green;
+            border-left: none;
+            border-right: none;
+        }
+
+        .box:nth-child(5) input:valid ~ span,
+        .box:nth-child(5) input:focus ~ span{
+            border: 1px solid green;
+            width: 80%;
+            text-align: center;
+        }
+
+        .box input:valid,
+        .box input:focus{
+            border: 1px solid green;
+        }

@@ -1,1 +1,47 @@
+@-webkit-keyframes scribble {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes scribble {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  body { 
+    background: #000;
+  }
+  
+  div#stripped {
+    position: relative;
+    top: 50px;
+    max-width: 850px;
+    margin: 0 auto;
+    background: #000;
+    background-image: url(https://images.unsplash.com/photo-1574784618880-a1036d310e7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+    background-size: cover;
+    font-size: 0;
+  }
 
+  
+  div#stripped svg {
+    background: #000;
+    mix-blend-mode: darken;
+  }
+  
+  div#stripped svg polyline {
+    fill: none;
+    stroke: #f00;
+    stroke-width: 200;
+    stroke-dasharray: 20000;
+    stroke-dashoffset: 20000;
+    -webkit-animation: scribble 4s linear forwards;
+            animation: scribble 4s linear forwards;
+  }
+  @media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+    div#stripped {
+    background-image: url(https://images.unsplash.com/photo-1574784618880-a1036d310e7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+    }
+  }

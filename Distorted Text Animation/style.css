@@ -1,1 +1,104 @@
 
+body{
+    margin: 0;
+    padding: 0;
+    background: #f28482;
+}
+
+ul{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+}
+
+li{
+    list-style: none;
+    float: left;
+    color: transparent;
+    font-family: "Arial black";
+    font-size: 13em;
+    position: relative;
+}
+
+ul li:before,
+ul li:after{
+    content: attr(data-title);
+    color: #262626;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+ul li:nth-child(odd):before{
+    -webkit-clip-path:polygon(55% 0, 0 0, 0 100%, 35% 100%);
+    clip-path:polygon(55% 0, 0 0, 0 100%, 35% 100%);
+    top: -7px;
+    left: -2px;
+}
+
+ul li:nth-child(odd):after{
+    -webkit-clip-path:polygon(55% 0, 100% 0, 100% 100%, 35% 100%);
+    clip-path:polygon(55% 0, 100% 0, 100% 100%, 35% 100%);
+    top: 2px;
+    left: 2px;
+}
+
+ul li:nth-child(even):before{
+    -webkit-clip-path:polygon(25% 0, 0 0, 0 100%, 75% 100%);
+    clip-path:polygon(25% 0, 0 0, 0 100%, 75% 100%);
+    top: 10px;
+    left: -2px;
+}
+
+ul li:nth-child(even):after{
+    -webkit-clip-path:polygon(25% 0, 100% 0, 100% 100%, 75% 100%);
+    clip-path:polygon(25% 0, 100% 0, 100% 100%, 75% 100%);
+    top: 2px;
+    left: 2px;
+}
+
+ul li:nth-child(even){
+    animation: even 3s linear infinite;
+}
+
+ul li:nth-child(odd){
+    animation: odd 3s linear infinite;
+}
+
+@keyframes even{
+    0%{
+        transform: rotate(15deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes odd{
+    0%{
+        transform: rotate(-15deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(15deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-15deg);
+    }
+}

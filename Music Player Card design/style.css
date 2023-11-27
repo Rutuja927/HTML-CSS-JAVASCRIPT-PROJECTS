@@ -1,1 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: #cad2c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 400px;
+    height: 600px;
+    background: #84a98c;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1c2327;
+}
+
+.top p{
+    font-weight: 500;
+}
+
+.top .fa-solid{
+    font-size: 22px;
+    color: #354f52;
+    cursor: pointer;
+}
+
+.top .fa-ellipsis{
+    font-size: 30px;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #1c2327;
+}
+
+.middle img{
+    width: 200px;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+
+.middle h2{
+    font-weight: 300;
+}
+
+.middle h1{
+    font-weight: 700;
+}
+
+.bars{
+    width: 100%;
+    height: 80px;
+}
+
+
+.bar{
+    margin: 15px 0;
+    display: inline-block;
+    width: 5px;
+    height: 50px;
+    background: #2f3e46;
+    animation: anim 0.5s linear infinite;
+}
+
+.bar:nth-child(1),.bar:nth-child(7),.bar:nth-child(13),.bar:nth-child(19),.bar:nth-child(25),.bar:nth-child(31),.bar:nth-child(37)
+{
+    animation-duration: 0.6s;
+}
+.bar:nth-child(2),.bar:nth-child(8),.bar:nth-child(14),.bar:nth-child(20),.bar:nth-child(26),.bar:nth-child(32),.bar:nth-child(38)
+{
+    animation-duration: 0.4s;
+}
+.bar:nth-child(3),.bar:nth-child(9),.bar:nth-child(15),.bar:nth-child(21),.bar:nth-child(27),.bar:nth-child(33),.bar:nth-child(39)
+{
+    animation-duration: 0.52s;
+}
+.bar:nth-child(4),.bar:nth-child(10),.bar:nth-child(16),.bar:nth-child(22),.bar:nth-child(28),.bar:nth-child(34),.bar:nth-child(40)
+{
+    animation-duration: 0.48s;
+}
+.bar:nth-child(5),.bar:nth-child(11),.bar:nth-child(17),.bar:nth-child(23),.bar:nth-child(29),.bar:nth-child(35)
+{
+    animation-duration: 0.36s;
+}
+.bar:nth-child(6), .bar:nth-child(12),.bar:nth-child(18),.bar:nth-child(24),.bar:nth-child(30),.bar:nth-child(36)
+{
+    animation-duration: 0.4s;
+}
+
+@keyframes anim {
+    0%{
+        height: 3px;
+    }
+    100%{
+        height: 50px;
+    }
+    95%{
+
+    }
+}
+
+.line{
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: #cad2c5;
+}
+
+.scale{
+    position: absolute;
+    top: -1px;
+    width: 30%;
+    height: 7px;
+    background-color: #354f52;
+}
+
+.time{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manage{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.play{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.play .fa{
+    font-size: 40px;
+    color: #354f52;
+    transition: 0.3s;
+}
+
+.manage i:hover, .middle img:hover{
+    scale: 105%;
+}
+
+.manage i{
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    color: #cad2c5;
+}

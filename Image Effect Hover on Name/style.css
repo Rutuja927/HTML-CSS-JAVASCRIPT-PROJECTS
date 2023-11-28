@@ -1,1 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  padding: 2vh 1vw;
+}
+
+html {
+  background: #060706;
+  color: #fff;
+  overflow: hidden;
+  --easing: cubic-bezier(0.5, 0.5, 0.2, 1);
+}
+
+.image-hover {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 2vh 0;
+  transform-origin: top left;
+  animation: skwoop 0.7s var(--easing) backwards;
+  animation-duration: calc(0.6s + (var(--i) * 0.1s));
+  animation-delay: calc((var(--i) * 50ms));
+  cursor: pointer;
+
+  @keyframes skwoop {
+    from {
+      opacity: 0;
+      transform: translateY(5vh) skewY(5deg);
+    }
+  }
+
+  .title {
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 9vh;
+    letter-spacing: 0.1ch;
+
+    &::after {
+      content: attr(data-title);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      color: transparent;
+      -webkit-text-stroke: 2px #fff;
+    }
+  }
+
+  > img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    width: 300px;
+    height: 500px;
+    pointer-events: none;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s linear, visibility 0s linear 0.2s;
+  }
+
+  &:hover,
+  &:focus {
+    z-index: 10;
+    .title::after {
+      display: block;
+    }
+    > img {
+      transition-delay: 0s;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+#app{
+  margin-top: 150px;
+}
+
+#app span{
+  font-size: 50px;
+}
+.image-hover > img {
+  --x-px: calc(var(--x) * 1px);
+  --y-px: calc(var(--y) * 1px);
+  top: 0;
+  left: 0;
+  transform: translate(var(--x-px),
+  var(--y-px)) translate(-50%, -50%);
+}
+
 

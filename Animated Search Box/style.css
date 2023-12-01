@@ -1,1 +1,76 @@
-
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+  }
+  
+  body{
+    background:#263238;
+    position:relative;
+  }
+  
+  .close{
+    position:absolute;
+    color:#fff;
+    top:20px;
+    right:50px;
+    font-size:1.7em;
+    cursor:pointer;
+    display:none;
+    z-index:999;
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg);
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition:all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+  }
+  
+  .close:hover{
+    font-size:2.4em;
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
+  }
+  /*-------------- saerch section -----------*/
+  .search{
+    position:fixed;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    border-radius:1000px;
+    width:0;
+    height:0;
+    background:#03a9f4;
+     -webkit-transition: all .4s linear;
+    transition:  all .4s linear;
+  }
+  
+  .search i{
+    color:#03a9f4;
+    font-size:1.7em;
+    cursor:pointer;
+  }
+  
+  .search .input{
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    width:350px;
+    height:40px;
+    background:transparent;
+    border:none;
+    outline:none;
+    border-bottom:3px solid #eee;
+    color:#eee;
+    font-size:1.3em;
+    display:none;
+  }
+  
+  
+  .search.open{
+    height:4000px;
+    width:4000px;
+  }

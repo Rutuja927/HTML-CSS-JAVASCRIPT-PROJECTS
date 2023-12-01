@@ -1,1 +1,300 @@
 
+body,
+button,
+div,
+span,
+svg {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-family: "Work Sans", sans-serif;
+  transition: all 0.5s ease-in-out;
+  outline: none;
+}
+
+.btn-lg {
+  width: 380px;
+  height: 120px;
+  border: 5px solid;
+  border-radius: 60px;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.btn-sm {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.btn-green {
+  color: #2b83cb;
+  background: transparent;
+  border-color: #2b83cb;
+}
+.btn-green:hover {
+  color: white;
+  background: #2b83cb;
+}
+
+.btn-black {
+  color: white;
+  background: rgb(169, 169, 169);
+}
+.btn-black:hover {
+  background: black;
+}
+
+.timer {
+  position: absolute;
+  left: calc(50% - 120px / 2);
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+}
+.timer svg {
+  fill: none;
+  stroke: #2b83cb;
+  stroke-width: 10px;
+  transform: rotate(-0.25turn);
+  transform-origin: center center;
+  stroke-dasharray: 383;
+  stroke-dashoffset: 383;
+  transition: stroke-dashoffset 0.3s ease-in-out;
+}
+
+.icon-success {
+  position: absolute;
+  top: 35px;
+  left: calc(50% - 50px / 2);
+  width: 50px;
+  height: 45px;
+  border: black;
+}
+.icon-success svg {
+  fill: none;
+  stroke: white;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  transition: stroke-dashoffset 0.2s 0.2s linear;
+  opacity: 0;
+}
+
+.do-submit {
+  color: white;
+  background: #2b83cb;
+  border-color: #2b83cb;
+  -webkit-animation: closeButton 0.3s 0.3s ease-in forwards;
+  animation: closeButton 0.3s 0.3s ease-in forwards;
+}
+.do-submit .text {
+  -webkit-animation: hideText 0.3s forwards;
+  animation: hideText 0.3s forwards;
+}
+.do-submit .timer {
+  transition: opacity 0.1s 0.6s linear;
+  opacity: 1;
+  z-index: 1;
+}
+
+.success {
+  border-color: #2b83cb;
+  -webkit-animation: openButton 0.3s ease-in forwards;
+  animation: openButton 0.3s ease-in forwards;
+}
+.success .timer {
+  opacity: 0;
+  transition: opacity 0.01s linear;
+}
+.success .icon-success svg {
+  opacity: 1;
+  stroke-dashoffset: 0;
+}
+
+.reset {
+  -webkit-animation: resetButton 0.5s ease-in forwards;
+  animation: resetButton 0.5s ease-in forwards;
+}
+.reset .icon-success {
+  opacity: 0;
+}
+.reset .text {
+  -webkit-animation: showText 0.8s ease-in forwards;
+  animation: showText 0.8s ease-in forwards;
+}
+
+@-webkit-keyframes closeButton {
+  90% {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-width: 10px;
+    border-color: #bbbbbb;
+  }
+  100% {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-width: 10px;
+    border-color: #bbbbbb;
+    border-radius: 50%;
+  }
+}
+@keyframes closeButton {
+  90% {
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    border-width: 10px;
+    border-color: #bbbbbb;
+  }
+  100% {
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    border-width: 10px;
+    border-color: #bbbbbb;
+    border-radius: 50%;
+  }
+}
+@-webkit-keyframes openButton {
+  from {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-color: #2b83cb;
+    border-width: 10px;
+    border-radius: 50%;
+  }
+  90% {
+    width: 380px;
+    height: 120px;
+    background: #2b83cb;
+    border-width: 5px;
+  }
+  100% {
+    width: 380px;
+    height: 120px;
+    background: #2b83cb;
+    border-color: #2b83cb;
+    border-width: 5px;
+    border-radius: 60px;
+  }
+}
+@keyframes openButton {
+  from {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-color: #2b83cb;
+    border-width: 10px;
+    border-radius: 50%;
+  }
+  90% {
+    width: 380px;
+    height: 120px;
+    background: #2b83cb;
+    border-width: 5px;
+  }
+  100% {
+    width: 380px;
+    height: 120px;
+    background: #2b83cb;
+    border-color: #2b83cb;
+    border-width: 5px;
+    border-radius: 60px;
+  }
+}
+@-webkit-keyframes resetButton {
+  to {
+    background: white;
+    color: #2b83cb;
+  }
+}
+@keyframes resetButton {
+  to {
+    background: white;
+    color: #2b83cb;
+  }
+}
+@-webkit-keyframes hideText {
+  from {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  20% {
+    transform: scaleX(1.1);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hideText {
+  from {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  20% {
+    transform: scaleX(1.1);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes showText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes showText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.top-left {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}

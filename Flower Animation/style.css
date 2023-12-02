@@ -1,1 +1,1257 @@
-
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.4em;
+    height: 0.4em;
+  }
+  .container:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 2em;
+    transform: translate(-50%, -50%);
+    background-color: #f46e6e;
+    border-radius: 50%;
+    content: "";
+  }
+  
+  .untoldcoding {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    background-color: #f46e6e;
+  }
+  .untoldcoding:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50%;
+    transform: rotateY(-90deg) translateZ(1em);
+    content: "";
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+  }
+  
+  .untoldcoding:nth-child(1) {
+    transform: rotateY(90deg) rotateX(6deg) translateZ(2em);
+    animation: untoldcoding1 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+  }
+  
+  @-webkit-keyframes untoldcoding1 {
+    50% {
+      transform: rotateY(90deg) rotateX(6deg) translateZ(12em);
+      background-color: #bf4d40;
+    }
+  }
+  
+  @keyframes untoldcoding1 {
+    50% {
+      transform: rotateY(90deg) rotateX(6deg) translateZ(12em);
+      background-color: #bf4d40;
+    }
+  }
+  .untoldcoding:nth-child(2) {
+    transform: rotateY(90deg) rotateX(12deg) translateZ(2em);
+    animation: untoldcoding2 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+  }
+  
+  @-webkit-keyframes untoldcoding2 {
+    50% {
+      transform: rotateY(90deg) rotateX(12deg) translateZ(12em);
+      background-color: #bf5940;
+    }
+  }
+  
+  @keyframes untoldcoding2 {
+    50% {
+      transform: rotateY(90deg) rotateX(12deg) translateZ(12em);
+      background-color: #bf5940;
+    }
+  }
+  .untoldcoding:nth-child(3) {
+    transform: rotateY(90deg) rotateX(18deg) translateZ(2em);
+    animation: untoldcoding3 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+  
+  @-webkit-keyframes untoldcoding3 {
+    50% {
+      transform: rotateY(90deg) rotateX(18deg) translateZ(12em);
+      background-color: #bf6640;
+    }
+  }
+  
+  @keyframes untoldcoding3 {
+    50% {
+      transform: rotateY(90deg) rotateX(18deg) translateZ(12em);
+      background-color: #bf6640;
+    }
+  }
+  .untoldcoding:nth-child(4) {
+    transform: rotateY(90deg) rotateX(24deg) translateZ(2em);
+    animation: untoldcoding4 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+  }
+  
+  @-webkit-keyframes untoldcoding4 {
+    50% {
+      transform: rotateY(90deg) rotateX(24deg) translateZ(12em);
+      background-color: #bf7340;
+    }
+  }
+  
+  @keyframes untoldcoding4 {
+    50% {
+      transform: rotateY(90deg) rotateX(24deg) translateZ(12em);
+      background-color: #bf7340;
+    }
+  }
+  .untoldcoding:nth-child(5) {
+    transform: rotateY(90deg) rotateX(30deg) translateZ(2em);
+    animation: untoldcoding5 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+  
+  @-webkit-keyframes untoldcoding5 {
+    50% {
+      transform: rotateY(90deg) rotateX(30deg) translateZ(12em);
+      background-color: #bf8040;
+    }
+  }
+  
+  @keyframes untoldcoding5 {
+    50% {
+      transform: rotateY(90deg) rotateX(30deg) translateZ(12em);
+      background-color: #bf8040;
+    }
+  }
+  .untoldcoding:nth-child(6) {
+    transform: rotateY(90deg) rotateX(36deg) translateZ(2em);
+    animation: untoldcoding6 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+  }
+  
+  @-webkit-keyframes untoldcoding6 {
+    50% {
+      transform: rotateY(90deg) rotateX(36deg) translateZ(12em);
+      background-color: #bf8c40;
+    }
+  }
+  
+  @keyframes untoldcoding6 {
+    50% {
+      transform: rotateY(90deg) rotateX(36deg) translateZ(12em);
+      background-color: #bf8c40;
+    }
+  }
+  .untoldcoding:nth-child(7) {
+    transform: rotateY(90deg) rotateX(42deg) translateZ(2em);
+    animation: untoldcoding7 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+  }
+  
+  @-webkit-keyframes untoldcoding7 {
+    50% {
+      transform: rotateY(90deg) rotateX(42deg) translateZ(12em);
+      background-color: #bf9940;
+    }
+  }
+  
+  @keyframes untoldcoding7 {
+    50% {
+      transform: rotateY(90deg) rotateX(42deg) translateZ(12em);
+      background-color: #bf9940;
+    }
+  }
+  .untoldcoding:nth-child(8) {
+    transform: rotateY(90deg) rotateX(48deg) translateZ(2em);
+    animation: untoldcoding8 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+  }
+  
+  @-webkit-keyframes untoldcoding8 {
+    50% {
+      transform: rotateY(90deg) rotateX(48deg) translateZ(12em);
+      background-color: #bfa640;
+    }
+  }
+  
+  @keyframes untoldcoding8 {
+    50% {
+      transform: rotateY(90deg) rotateX(48deg) translateZ(12em);
+      background-color: #bfa640;
+    }
+  }
+  .untoldcoding:nth-child(9) {
+    transform: rotateY(90deg) rotateX(54deg) translateZ(2em);
+    animation: untoldcoding9 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+  }
+  
+  @-webkit-keyframes untoldcoding9 {
+    50% {
+      transform: rotateY(90deg) rotateX(54deg) translateZ(12em);
+      background-color: #bfb340;
+    }
+  }
+  
+  @keyframes untoldcoding9 {
+    50% {
+      transform: rotateY(90deg) rotateX(54deg) translateZ(12em);
+      background-color: #bfb340;
+    }
+  }
+  .untoldcoding:nth-child(10) {
+    transform: rotateY(90deg) rotateX(60deg) translateZ(2em);
+    animation: untoldcoding10 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  
+  @-webkit-keyframes untoldcoding10 {
+    50% {
+      transform: rotateY(90deg) rotateX(60deg) translateZ(12em);
+      background-color: #bfbf40;
+    }
+  }
+  
+  @keyframes untoldcoding10 {
+    50% {
+      transform: rotateY(90deg) rotateX(60deg) translateZ(12em);
+      background-color: #bfbf40;
+    }
+  }
+  .untoldcoding:nth-child(11) {
+    transform: rotateY(90deg) rotateX(66deg) translateZ(2em);
+    animation: untoldcoding11 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 1.1s;
+    animation-delay: 1.1s;
+  }
+  
+  @-webkit-keyframes untoldcoding11 {
+    50% {
+      transform: rotateY(90deg) rotateX(66deg) translateZ(12em);
+      background-color: #b3bf40;
+    }
+  }
+  
+  @keyframes untoldcoding11 {
+    50% {
+      transform: rotateY(90deg) rotateX(66deg) translateZ(12em);
+      background-color: #b3bf40;
+    }
+  }
+  .untoldcoding:nth-child(12) {
+    transform: rotateY(90deg) rotateX(72deg) translateZ(2em);
+    animation: untoldcoding12 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+  }
+  
+  @-webkit-keyframes untoldcoding12 {
+    50% {
+      transform: rotateY(90deg) rotateX(72deg) translateZ(12em);
+      background-color: #a6bf40;
+    }
+  }
+  
+  @keyframes untoldcoding12 {
+    50% {
+      transform: rotateY(90deg) rotateX(72deg) translateZ(12em);
+      background-color: #a6bf40;
+    }
+  }
+  .untoldcoding:nth-child(13) {
+    transform: rotateY(90deg) rotateX(78deg) translateZ(2em);
+    animation: untoldcoding13 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+  }
+  
+  @-webkit-keyframes untoldcoding13 {
+    50% {
+      transform: rotateY(90deg) rotateX(78deg) translateZ(12em);
+      background-color: #99bf40;
+    }
+  }
+  
+  @keyframes untoldcoding13 {
+    50% {
+      transform: rotateY(90deg) rotateX(78deg) translateZ(12em);
+      background-color: #99bf40;
+    }
+  }
+  .untoldcoding:nth-child(14) {
+    transform: rotateY(90deg) rotateX(84deg) translateZ(2em);
+    animation: untoldcoding14 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+  }
+  
+  @-webkit-keyframes untoldcoding14 {
+    50% {
+      transform: rotateY(90deg) rotateX(84deg) translateZ(12em);
+      background-color: #8cbf40;
+    }
+  }
+  
+  @keyframes untoldcoding14 {
+    50% {
+      transform: rotateY(90deg) rotateX(84deg) translateZ(12em);
+      background-color: #8cbf40;
+    }
+  }
+  .untoldcoding:nth-child(15) {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(2em);
+    animation: untoldcoding15 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+  }
+  
+  @-webkit-keyframes untoldcoding15 {
+    50% {
+      transform: rotateY(90deg) rotateX(90deg) translateZ(12em);
+      background-color: #80bf40;
+    }
+  }
+  
+  @keyframes untoldcoding15 {
+    50% {
+      transform: rotateY(90deg) rotateX(90deg) translateZ(12em);
+      background-color: #80bf40;
+    }
+  }
+  .untoldcoding:nth-child(16) {
+    transform: rotateY(90deg) rotateX(96deg) translateZ(2em);
+    animation: untoldcoding16 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+  }
+  
+  @-webkit-keyframes untoldcoding16 {
+    50% {
+      transform: rotateY(90deg) rotateX(96deg) translateZ(12em);
+      background-color: #73bf40;
+    }
+  }
+  
+  @keyframes untoldcoding16 {
+    50% {
+      transform: rotateY(90deg) rotateX(96deg) translateZ(12em);
+      background-color: #73bf40;
+    }
+  }
+  .untoldcoding:nth-child(17) {
+    transform: rotateY(90deg) rotateX(102deg) translateZ(2em);
+    animation: untoldcoding17 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 1.7s;
+    animation-delay: 1.7s;
+  }
+  
+  @-webkit-keyframes untoldcoding17 {
+    50% {
+      transform: rotateY(90deg) rotateX(102deg) translateZ(12em);
+      background-color: #66bf40;
+    }
+  }
+  
+  @keyframes untoldcoding17 {
+    50% {
+      transform: rotateY(90deg) rotateX(102deg) translateZ(12em);
+      background-color: #66bf40;
+    }
+  }
+  .untoldcoding:nth-child(18) {
+    transform: rotateY(90deg) rotateX(108deg) translateZ(2em);
+    animation: untoldcoding18 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+  }
+  
+  @-webkit-keyframes untoldcoding18 {
+    50% {
+      transform: rotateY(90deg) rotateX(108deg) translateZ(12em);
+      background-color: #59bf40;
+    }
+  }
+  
+  @keyframes untoldcoding18 {
+    50% {
+      transform: rotateY(90deg) rotateX(108deg) translateZ(12em);
+      background-color: #59bf40;
+    }
+  }
+  .untoldcoding:nth-child(19) {
+    transform: rotateY(90deg) rotateX(114deg) translateZ(2em);
+    animation: untoldcoding19 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 1.9s;
+    animation-delay: 1.9s;
+  }
+  
+  @-webkit-keyframes untoldcoding19 {
+    50% {
+      transform: rotateY(90deg) rotateX(114deg) translateZ(12em);
+      background-color: #4dbf40;
+    }
+  }
+  
+  @keyframes untoldcoding19 {
+    50% {
+      transform: rotateY(90deg) rotateX(114deg) translateZ(12em);
+      background-color: #4dbf40;
+    }
+  }
+  .untoldcoding:nth-child(20) {
+    transform: rotateY(90deg) rotateX(120deg) translateZ(2em);
+    animation: untoldcoding20 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  
+  @-webkit-keyframes untoldcoding20 {
+    50% {
+      transform: rotateY(90deg) rotateX(120deg) translateZ(12em);
+      background-color: #40bf40;
+    }
+  }
+  
+  @keyframes untoldcoding20 {
+    50% {
+      transform: rotateY(90deg) rotateX(120deg) translateZ(12em);
+      background-color: #40bf40;
+    }
+  }
+  .untoldcoding:nth-child(21) {
+    transform: rotateY(90deg) rotateX(126deg) translateZ(2em);
+    animation: untoldcoding21 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 2.1s;
+    animation-delay: 2.1s;
+  }
+  
+  @-webkit-keyframes untoldcoding21 {
+    50% {
+      transform: rotateY(90deg) rotateX(126deg) translateZ(12em);
+      background-color: #40bf4d;
+    }
+  }
+  
+  @keyframes untoldcoding21 {
+    50% {
+      transform: rotateY(90deg) rotateX(126deg) translateZ(12em);
+      background-color: #40bf4d;
+    }
+  }
+  .untoldcoding:nth-child(22) {
+    transform: rotateY(90deg) rotateX(132deg) translateZ(2em);
+    animation: untoldcoding22 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+  }
+  
+  @-webkit-keyframes untoldcoding22 {
+    50% {
+      transform: rotateY(90deg) rotateX(132deg) translateZ(12em);
+      background-color: #40bf59;
+    }
+  }
+  
+  @keyframes untoldcoding22 {
+    50% {
+      transform: rotateY(90deg) rotateX(132deg) translateZ(12em);
+      background-color: #40bf59;
+    }
+  }
+  .untoldcoding:nth-child(23) {
+    transform: rotateY(90deg) rotateX(138deg) translateZ(2em);
+    animation: untoldcoding23 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 2.3s;
+    animation-delay: 2.3s;
+  }
+  
+  @-webkit-keyframes untoldcoding23 {
+    50% {
+      transform: rotateY(90deg) rotateX(138deg) translateZ(12em);
+      background-color: #40bf66;
+    }
+  }
+  
+  @keyframes untoldcoding23 {
+    50% {
+      transform: rotateY(90deg) rotateX(138deg) translateZ(12em);
+      background-color: #40bf66;
+    }
+  }
+  .untoldcoding:nth-child(24) {
+    transform: rotateY(90deg) rotateX(144deg) translateZ(2em);
+    animation: untoldcoding24 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+  }
+  
+  @-webkit-keyframes untoldcoding24 {
+    50% {
+      transform: rotateY(90deg) rotateX(144deg) translateZ(12em);
+      background-color: #40bf73;
+    }
+  }
+  
+  @keyframes untoldcoding24 {
+    50% {
+      transform: rotateY(90deg) rotateX(144deg) translateZ(12em);
+      background-color: #40bf73;
+    }
+  }
+  .untoldcoding:nth-child(25) {
+    transform: rotateY(90deg) rotateX(150deg) translateZ(2em);
+    animation: untoldcoding25 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+  
+  @-webkit-keyframes untoldcoding25 {
+    50% {
+      transform: rotateY(90deg) rotateX(150deg) translateZ(12em);
+      background-color: #40bf80;
+    }
+  }
+  
+  @keyframes untoldcoding25 {
+    50% {
+      transform: rotateY(90deg) rotateX(150deg) translateZ(12em);
+      background-color: #40bf80;
+    }
+  }
+  .untoldcoding:nth-child(26) {
+    transform: rotateY(90deg) rotateX(156deg) translateZ(2em);
+    animation: untoldcoding26 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 2.6s;
+    animation-delay: 2.6s;
+  }
+  
+  @-webkit-keyframes untoldcoding26 {
+    50% {
+      transform: rotateY(90deg) rotateX(156deg) translateZ(12em);
+      background-color: #40bf8c;
+    }
+  }
+  
+  @keyframes untoldcoding26 {
+    50% {
+      transform: rotateY(90deg) rotateX(156deg) translateZ(12em);
+      background-color: #40bf8c;
+    }
+  }
+  .untoldcoding:nth-child(27) {
+    transform: rotateY(90deg) rotateX(162deg) translateZ(2em);
+    animation: untoldcoding27 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 2.7s;
+    animation-delay: 2.7s;
+  }
+  
+  @-webkit-keyframes untoldcoding27 {
+    50% {
+      transform: rotateY(90deg) rotateX(162deg) translateZ(12em);
+      background-color: #40bf99;
+    }
+  }
+  
+  @keyframes untoldcoding27 {
+    50% {
+      transform: rotateY(90deg) rotateX(162deg) translateZ(12em);
+      background-color: #40bf99;
+    }
+  }
+  .untoldcoding:nth-child(28) {
+    transform: rotateY(90deg) rotateX(168deg) translateZ(2em);
+    animation: untoldcoding28 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 2.8s;
+    animation-delay: 2.8s;
+  }
+  
+  @-webkit-keyframes untoldcoding28 {
+    50% {
+      transform: rotateY(90deg) rotateX(168deg) translateZ(12em);
+      background-color: #bf6440;
+    }
+  }
+  
+  @keyframes untoldcoding28 {
+    50% {
+      transform: rotateY(90deg) rotateX(168deg) translateZ(12em);
+      background-color: #ffffff;
+    }
+  }
+  .untoldcoding:nth-child(29) {
+    transform: rotateY(90deg) rotateX(174deg) translateZ(2em);
+    animation: untoldcoding29 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 2.9s;
+    animation-delay: 2.9s;
+  }
+  
+  @-webkit-keyframes untoldcoding29 {
+    50% {
+      transform: rotateY(90deg) rotateX(174deg) translateZ(12em);
+      background-color: #40bfb3;
+    }
+  }
+  
+  @keyframes untoldcoding29 {
+    50% {
+      transform: rotateY(90deg) rotateX(174deg) translateZ(12em);
+      background-color: #40bfb3;
+    }
+  }
+  .untoldcoding:nth-child(30) {
+    transform: rotateY(90deg) rotateX(180deg) translateZ(2em);
+    animation: untoldcoding30 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+  }
+  
+  @-webkit-keyframes untoldcoding30 {
+    50% {
+      transform: rotateY(90deg) rotateX(180deg) translateZ(12em);
+      background-color: #40bfbf;
+    }
+  }
+  
+  @keyframes untoldcoding30 {
+    50% {
+      transform: rotateY(90deg) rotateX(180deg) translateZ(12em);
+      background-color: #40bfbf;
+    }
+  }
+  .untoldcoding:nth-child(31) {
+    transform: rotateY(90deg) rotateX(186deg) translateZ(2em);
+    animation: untoldcoding31 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 3.1s;
+    animation-delay: 3.1s;
+  }
+  
+  @-webkit-keyframes untoldcoding31 {
+    50% {
+      transform: rotateY(90deg) rotateX(186deg) translateZ(12em);
+      background-color: #40b3bf;
+    }
+  }
+  
+  @keyframes untoldcoding31 {
+    50% {
+      transform: rotateY(90deg) rotateX(186deg) translateZ(12em);
+      background-color: #40b3bf;
+    }
+  }
+  .untoldcoding:nth-child(32) {
+    transform: rotateY(90deg) rotateX(192deg) translateZ(2em);
+    animation: untoldcoding32 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 3.2s;
+    animation-delay: 3.2s;
+  }
+  
+  @-webkit-keyframes untoldcoding32 {
+    50% {
+      transform: rotateY(90deg) rotateX(192deg) translateZ(12em);
+      background-color: #40a6bf;
+    }
+  }
+  
+  @keyframes untoldcoding32 {
+    50% {
+      transform: rotateY(90deg) rotateX(192deg) translateZ(12em);
+      background-color: #40a6bf;
+    }
+  }
+  .untoldcoding:nth-child(33) {
+    transform: rotateY(90deg) rotateX(198deg) translateZ(2em);
+    animation: untoldcoding33 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 3.3s;
+    animation-delay: 3.3s;
+  }
+  
+  @-webkit-keyframes untoldcoding33 {
+    50% {
+      transform: rotateY(90deg) rotateX(198deg) translateZ(12em);
+      background-color: #4099bf;
+    }
+  }
+  
+  @keyframes untoldcoding33 {
+    50% {
+      transform: rotateY(90deg) rotateX(198deg) translateZ(12em);
+      background-color: #4099bf;
+    }
+  }
+  .untoldcoding:nth-child(34) {
+    transform: rotateY(90deg) rotateX(204deg) translateZ(2em);
+    animation: untoldcoding34 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 3.4s;
+    animation-delay: 3.4s;
+  }
+  
+  @-webkit-keyframes untoldcoding34 {
+    50% {
+      transform: rotateY(90deg) rotateX(204deg) translateZ(12em);
+      background-color: #408cbf;
+    }
+  }
+  
+  @keyframes untoldcoding34 {
+    50% {
+      transform: rotateY(90deg) rotateX(204deg) translateZ(12em);
+      background-color: #408cbf;
+    }
+  }
+  .untoldcoding:nth-child(35) {
+    transform: rotateY(90deg) rotateX(210deg) translateZ(2em);
+    animation: untoldcoding35 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+  }
+  
+  @-webkit-keyframes untoldcoding35 {
+    50% {
+      transform: rotateY(90deg) rotateX(210deg) translateZ(12em);
+      background-color: #4080bf;
+    }
+  }
+  
+  @keyframes untoldcoding35 {
+    50% {
+      transform: rotateY(90deg) rotateX(210deg) translateZ(12em);
+      background-color: #4080bf;
+    }
+  }
+  .untoldcoding:nth-child(36) {
+    transform: rotateY(90deg) rotateX(216deg) translateZ(2em);
+    animation: untoldcoding36 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 3.6s;
+    animation-delay: 3.6s;
+  }
+  
+  @-webkit-keyframes untoldcoding36 {
+    50% {
+      transform: rotateY(90deg) rotateX(216deg) translateZ(12em);
+      background-color: #4073bf;
+    }
+  }
+  
+  @keyframes untoldcoding36 {
+    50% {
+      transform: rotateY(90deg) rotateX(216deg) translateZ(12em);
+      background-color: #4073bf;
+    }
+  }
+  .untoldcoding:nth-child(37) {
+    transform: rotateY(90deg) rotateX(222deg) translateZ(2em);
+    animation: untoldcoding37 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 3.7s;
+    animation-delay: 3.7s;
+  }
+  
+  @-webkit-keyframes untoldcoding37 {
+    50% {
+      transform: rotateY(90deg) rotateX(222deg) translateZ(12em);
+      background-color: #4066bf;
+    }
+  }
+  
+  @keyframes untoldcoding37 {
+    50% {
+      transform: rotateY(90deg) rotateX(222deg) translateZ(12em);
+      background-color: #4066bf;
+    }
+  }
+  .untoldcoding:nth-child(38) {
+    transform: rotateY(90deg) rotateX(228deg) translateZ(2em);
+    animation: untoldcoding38 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 3.8s;
+    animation-delay: 3.8s;
+  }
+  
+  @-webkit-keyframes untoldcoding38 {
+    50% {
+      transform: rotateY(90deg) rotateX(228deg) translateZ(12em);
+      background-color: #4059bf;
+    }
+  }
+  
+  @keyframes untoldcoding38 {
+    50% {
+      transform: rotateY(90deg) rotateX(228deg) translateZ(12em);
+      background-color: #4059bf;
+    }
+  }
+  .untoldcoding:nth-child(39) {
+    transform: rotateY(90deg) rotateX(234deg) translateZ(2em);
+    animation: untoldcoding39 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 3.9s;
+    animation-delay: 3.9s;
+  }
+  
+  @-webkit-keyframes untoldcoding39 {
+    50% {
+      transform: rotateY(90deg) rotateX(234deg) translateZ(12em);
+      background-color: #ffffff;
+    }
+  }
+  
+  @keyframes untoldcoding39 {
+    50% {
+      transform: rotateY(90deg) rotateX(234deg) translateZ(12em);
+      background-color: #404dbf;
+    }
+  }
+  .untoldcoding:nth-child(40) {
+    transform: rotateY(90deg) rotateX(240deg) translateZ(2em);
+    animation: untoldcoding40 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+  }
+  
+  @-webkit-keyframes untoldcoding40 {
+    50% {
+      transform: rotateY(90deg) rotateX(240deg) translateZ(12em);
+      background-color: #4040bf;
+    }
+  }
+  
+  @keyframes untoldcoding40 {
+    50% {
+      transform: rotateY(90deg) rotateX(240deg) translateZ(12em);
+      background-color: #4040bf;
+    }
+  }
+  .untoldcoding:nth-child(41) {
+    transform: rotateY(90deg) rotateX(246deg) translateZ(2em);
+    animation: untoldcoding41 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 4.1s;
+    animation-delay: 4.1s;
+  }
+  
+  @-webkit-keyframes untoldcoding41 {
+    50% {
+      transform: rotateY(90deg) rotateX(246deg) translateZ(12em);
+      background-color: #4d40bf;
+    }
+  }
+  
+  @keyframes untoldcoding41 {
+    50% {
+      transform: rotateY(90deg) rotateX(246deg) translateZ(12em);
+      background-color: #4d40bf;
+    }
+  }
+  .untoldcoding:nth-child(42) {
+    transform: rotateY(90deg) rotateX(252deg) translateZ(2em);
+    animation: untoldcoding42 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 4.2s;
+    animation-delay: 4.2s;
+  }
+  
+  @-webkit-keyframes untoldcoding42 {
+    50% {
+      transform: rotateY(90deg) rotateX(252deg) translateZ(12em);
+      background-color: #5940bf;
+    }
+  }
+  
+  @keyframes untoldcoding42 {
+    50% {
+      transform: rotateY(90deg) rotateX(252deg) translateZ(12em);
+      background-color: #5940bf;
+    }
+  }
+  .untoldcoding:nth-child(43) {
+    transform: rotateY(90deg) rotateX(258deg) translateZ(2em);
+    animation: untoldcoding43 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 4.3s;
+    animation-delay: 4.3s;
+  }
+  
+  @-webkit-keyframes untoldcoding43 {
+    50% {
+      transform: rotateY(90deg) rotateX(258deg) translateZ(12em);
+      background-color: #6640bf;
+    }
+  }
+  
+  @keyframes untoldcoding43 {
+    50% {
+      transform: rotateY(90deg) rotateX(258deg) translateZ(12em);
+      background-color: #6640bf;
+    }
+  }
+  .untoldcoding:nth-child(44) {
+    transform: rotateY(90deg) rotateX(264deg) translateZ(2em);
+    animation: untoldcoding44 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 4.4s;
+    animation-delay: 4.4s;
+  }
+  
+  @-webkit-keyframes untoldcoding44 {
+    50% {
+      transform: rotateY(90deg) rotateX(264deg) translateZ(12em);
+      background-color: #7340bf;
+    }
+  }
+  
+  @keyframes untoldcoding44 {
+    50% {
+      transform: rotateY(90deg) rotateX(264deg) translateZ(12em);
+      background-color: #7340bf;
+    }
+  }
+  .untoldcoding:nth-child(45) {
+    transform: rotateY(90deg) rotateX(270deg) translateZ(2em);
+    animation: untoldcoding45 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 4.5s;
+    animation-delay: 4.5s;
+  }
+  
+  @-webkit-keyframes untoldcoding45 {
+    50% {
+      transform: rotateY(90deg) rotateX(270deg) translateZ(12em);
+      background-color: #8040bf;
+    }
+  }
+  
+  @keyframes untoldcoding45 {
+    50% {
+      transform: rotateY(90deg) rotateX(270deg) translateZ(12em);
+      background-color: #8040bf;
+    }
+  }
+  .untoldcoding:nth-child(46) {
+    transform: rotateY(90deg) rotateX(276deg) translateZ(2em);
+    animation: untoldcoding46 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 4.6s;
+    animation-delay: 4.6s;
+  }
+  
+  @-webkit-keyframes untoldcoding46 {
+    50% {
+      transform: rotateY(90deg) rotateX(276deg) translateZ(12em);
+      background-color: #8c40bf;
+    }
+  }
+  
+  @keyframes untoldcoding46 {
+    50% {
+      transform: rotateY(90deg) rotateX(276deg) translateZ(12em);
+      background-color: #8c40bf;
+    }
+  }
+  .untoldcoding:nth-child(47) {
+    transform: rotateY(90deg) rotateX(282deg) translateZ(2em);
+    animation: untoldcoding47 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 4.7s;
+    animation-delay: 4.7s;
+  }
+  
+  @-webkit-keyframes untoldcoding47 {
+    50% {
+      transform: rotateY(90deg) rotateX(282deg) translateZ(12em);
+      background-color: #9940bf;
+    }
+  }
+  
+  @keyframes untoldcoding47 {
+    50% {
+      transform: rotateY(90deg) rotateX(282deg) translateZ(12em);
+      background-color: #9940bf;
+    }
+  }
+  .untoldcoding:nth-child(48) {
+    transform: rotateY(90deg) rotateX(288deg) translateZ(2em);
+    animation: untoldcoding48 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 4.8s;
+    animation-delay: 4.8s;
+  }
+  
+  @-webkit-keyframes untoldcoding48 {
+    50% {
+      transform: rotateY(90deg) rotateX(288deg) translateZ(12em);
+      background-color: #a640bf;
+    }
+  }
+  
+  @keyframes untoldcoding48 {
+    50% {
+      transform: rotateY(90deg) rotateX(288deg) translateZ(12em);
+      background-color: #a640bf;
+    }
+  }
+  .untoldcoding:nth-child(49) {
+    transform: rotateY(90deg) rotateX(294deg) translateZ(2em);
+    animation: untoldcoding49 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 4.9s;
+    animation-delay: 4.9s;
+  }
+  
+  @-webkit-keyframes untoldcoding49 {
+    50% {
+      transform: rotateY(90deg) rotateX(294deg) translateZ(12em);
+      background-color: #b340bf;
+    }
+  }
+  
+  @keyframes untoldcoding49 {
+    50% {
+      transform: rotateY(90deg) rotateX(294deg) translateZ(12em);
+      background-color: #b340bf;
+    }
+  }
+  .untoldcoding:nth-child(50) {
+    transform: rotateY(90deg) rotateX(300deg) translateZ(2em);
+    animation: untoldcoding50 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+  }
+  
+  @-webkit-keyframes untoldcoding50 {
+    50% {
+      transform: rotateY(90deg) rotateX(300deg) translateZ(12em);
+      background-color: #bf40bf;
+    }
+  }
+  
+  @keyframes untoldcoding50 {
+    50% {
+      transform: rotateY(90deg) rotateX(300deg) translateZ(12em);
+      background-color: #bf40bf;
+    }
+  }
+  .untoldcoding:nth-child(51) {
+    transform: rotateY(90deg) rotateX(306deg) translateZ(2em);
+    animation: untoldcoding51 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 5.1s;
+    animation-delay: 5.1s;
+  }
+  
+  @-webkit-keyframes untoldcoding51 {
+    50% {
+      transform: rotateY(90deg) rotateX(306deg) translateZ(12em);
+      background-color: #bf40b3;
+    }
+  }
+  
+  @keyframes untoldcoding51 {
+    50% {
+      transform: rotateY(90deg) rotateX(306deg) translateZ(12em);
+      background-color: #bf40b3;
+    }
+  }
+  .untoldcoding:nth-child(52) {
+    transform: rotateY(90deg) rotateX(312deg) translateZ(2em);
+    animation: untoldcoding52 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 5.2s;
+    animation-delay: 5.2s;
+  }
+  
+  @-webkit-keyframes untoldcoding52 {
+    50% {
+      transform: rotateY(90deg) rotateX(312deg) translateZ(12em);
+      background-color: #bf40a6;
+    }
+  }
+  
+  @keyframes untoldcoding52 {
+    50% {
+      transform: rotateY(90deg) rotateX(312deg) translateZ(12em);
+      background-color: #bf40a6;
+    }
+  }
+  .untoldcoding:nth-child(53) {
+    transform: rotateY(90deg) rotateX(318deg) translateZ(2em);
+    animation: untoldcoding53 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 5.3s;
+    animation-delay: 5.3s;
+  }
+  
+  @-webkit-keyframes untoldcoding53 {
+    50% {
+      transform: rotateY(90deg) rotateX(318deg) translateZ(12em);
+      background-color: #bf4099;
+    }
+  }
+  
+  @keyframes untoldcoding53 {
+    50% {
+      transform: rotateY(90deg) rotateX(318deg) translateZ(12em);
+      background-color: #bf4099;
+    }
+  }
+  .untoldcoding:nth-child(54) {
+    transform: rotateY(90deg) rotateX(324deg) translateZ(2em);
+    animation: untoldcoding54 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 5.4s;
+    animation-delay: 5.4s;
+  }
+  
+  @-webkit-keyframes untoldcoding54 {
+    50% {
+      transform: rotateY(90deg) rotateX(324deg) translateZ(12em);
+      background-color: #bf408c;
+    }
+  }
+  
+  @keyframes untoldcoding54 {
+    50% {
+      transform: rotateY(90deg) rotateX(324deg) translateZ(12em);
+      background-color: #bf408c;
+    }
+  }
+  .untoldcoding:nth-child(55) {
+    transform: rotateY(90deg) rotateX(330deg) translateZ(2em);
+    animation: untoldcoding55 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 5.5s;
+    animation-delay: 5.5s;
+  }
+  
+  @-webkit-keyframes untoldcoding55 {
+    50% {
+      transform: rotateY(90deg) rotateX(330deg) translateZ(12em);
+      background-color: #bf4080;
+    }
+  }
+  
+  @keyframes untoldcoding55 {
+    50% {
+      transform: rotateY(90deg) rotateX(330deg) translateZ(12em);
+      background-color: #bf4080;
+    }
+  }
+  .untoldcoding:nth-child(56) {
+    transform: rotateY(90deg) rotateX(336deg) translateZ(2em);
+    animation: untoldcoding56 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 5.6s;
+    animation-delay: 5.6s;
+  }
+  
+  @-webkit-keyframes untoldcoding56 {
+    50% {
+      transform: rotateY(90deg) rotateX(336deg) translateZ(12em);
+      background-color: #bf4073;
+    }
+  }
+  
+  @keyframes untoldcoding56 {
+    50% {
+      transform: rotateY(90deg) rotateX(336deg) translateZ(12em);
+      background-color: #bf4073;
+    }
+  }
+  .untoldcoding:nth-child(57) {
+    transform: rotateY(90deg) rotateX(342deg) translateZ(2em);
+    animation: untoldcoding57 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 5.7s;
+    animation-delay: 5.7s;
+  }
+  
+  @-webkit-keyframes untoldcoding57 {
+    50% {
+      transform: rotateY(90deg) rotateX(342deg) translateZ(12em);
+      background-color: #bf4066;
+    }
+  }
+  
+  @keyframes untoldcoding57 {
+    50% {
+      transform: rotateY(90deg) rotateX(342deg) translateZ(12em);
+      background-color: #bf4066;
+    }
+  }
+  .untoldcoding:nth-child(58) {
+    transform: rotateY(90deg) rotateX(348deg) translateZ(2em);
+    animation: untoldcoding58 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 5.8s;
+    animation-delay: 5.8s;
+  }
+  
+  @-webkit-keyframes untoldcoding58 {
+    50% {
+      transform: rotateY(90deg) rotateX(348deg) translateZ(12em);
+      background-color: #bf4059;
+    }
+  }
+  
+  @keyframes untoldcoding58 {
+    50% {
+      transform: rotateY(90deg) rotateX(348deg) translateZ(12em);
+      background-color: #bf4059;
+    }
+  }
+  .untoldcoding:nth-child(59) {
+    transform: rotateY(90deg) rotateX(354deg) translateZ(2em);
+    animation: untoldcoding59 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 5.9s;
+    animation-delay: 5.9s;
+  }
+  
+  @-webkit-keyframes untoldcoding59 {
+    50% {
+      transform: rotateY(90deg) rotateX(354deg) translateZ(12em);
+      background-color: #bf404d;
+    }
+  }
+  
+  @keyframes untoldcoding59 {
+    50% {
+      transform: rotateY(90deg) rotateX(354deg) translateZ(12em);
+      background-color: #bf404d;
+    }
+  }
+  .untoldcoding:nth-child(60) {
+    transform: rotateY(90deg) rotateX(360deg) translateZ(2em);
+    animation: untoldcoding60 1s ease-in-out infinite reverse;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+  }
+  
+  @-webkit-keyframes untoldcoding60 {
+    50% {
+      transform: rotateY(90deg) rotateX(360deg) translateZ(12em);
+      background-color: #bf4040;
+    }
+  }
+  
+  @keyframes untoldcoding60 {
+    50% {
+      transform: rotateY(90deg) rotateX(360deg) translateZ(12em);
+      background-color: #bf4040;
+    }
+  }
+  body {
+    height: 100vh;
+    background: black;
+    background-image: radial-gradient(
+      center,
+      rgba(255, 255, 255, 0.1),
+      transparent 75%
+    );
+  }
+  
+  body * {
+    transform-style: preserve-3d;
+  }
+  

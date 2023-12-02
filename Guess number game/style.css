@@ -1,1 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #247b7b;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game {
+  width: 450px;
+  height: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 36px;
+  background: #247b7b;
+  box-shadow: inset 8px 8px 16px #1c6060,
+            inset -8px -8px 16px #2c9696;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #093f44;
+  margin-bottom: 30px;
+  text-shadow: 0px 2px 1px rgba(255, 255, 250, 1);
+}
+
+p{
+  font-size: 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #fffffa;
+  margin-bottom: 30px;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input{
+  padding: 0 30px;
+  width: 70%;
+  height: 40px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+ rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+input:focus-within{
+  font-size: 18px;
+  font-weight: 500;
+  color: #093f44;
+}
+
+#canvas-container {
+  background-color: grey;
+}
+
+
+#btnSubmit{
+  padding: 8px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  background: #093f44;
+  outline: none;
+  border: none;
+  text-align: center;
+  color: #fffffa;
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+
+#btnReset{
+  padding: 8px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  background: #fffffa;
+  outline: none;
+  border: none;
+  text-align: center;
+  color: #093f44;
+  text-transform: uppercase;
+}
+
+#response {
+  padding-right: 10px;
+}
+
+#game, #inputLabel {
+  /* height: 100%; */
+  min-height: 250px;
+}

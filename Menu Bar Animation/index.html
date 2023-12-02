@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu bar animation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <ul id="menu">
+        <a
+          class="menu-button icon-plus"
+          id="open-menu"
+          href="#menu"
+          title="Show navigation"
+        ></a>
+        <a class="menu-button icon-minus" href="#0" title="Hide navigation"></a>
+        <li class="menu-item">
+          <a href="#menu">
+            <span class="fa fa-github"></span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#menu">
+            <span class="fa fa-linkedin"></span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#menu">
+            <span class="fa fa-instagram"></span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#menu">
+            <span class="fa fa-twitter"></span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#menu">
+            <span class="fa fa-twitter"></span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="content">
+        <div class="text">
+          <h5>Click On Picture!</h5>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        var menuButton = document.getElementById("open-menu");
+        menuButton.click();
+      };
+    </script>
+    <script
+      src="https://kit.fontawesome.com/28069d2172.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
 

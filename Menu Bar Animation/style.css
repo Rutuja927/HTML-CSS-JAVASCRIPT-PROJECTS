@@ -1,1 +1,108 @@
-
+body {
+    font-family: "Dosis", sans-serif;
+    text-align: center;
+    background-color: rgb(1, 27, 122);
+    color: white;
+  }
+  
+  #menu {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -75px 0 0 -75px;
+    list-style: none;
+    font-size: 200%;
+  }
+  
+  .menu-button {
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .menu-button {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    background: url(Untold\ Coding.png);
+    background-size: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px rgb(246, 159, 159);
+  }
+  
+  #menu:not(:target) > a:first-of-type,
+  #menu:target > a:last-of-type {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  #menu:not(:target) > .icon-plus:before,
+  #menu:target > .icon-minus:before {
+    opacity: 1;
+  }
+  
+  .menu-item {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 55%;
+    line-height: 5px;
+    top: 50%;
+    margin: -50px 0 0 -50px;
+    border-radius: 50%;
+    background-color: rgba(160, 21, 21, 0.588);
+    transform: translate(0px, 0px);
+    transition: transform 500ms;
+    z-index: -2;
+  }
+  
+  .menu-item:hover {
+    background-color: #c71414;
+    color: #c71414;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+  }
+  
+  .menu-item a {
+    color: #ffffff;
+    position: relative;
+    top: 30%;
+    left: 0;
+    text-decoration: none;
+  }
+  
+  #menu:target > .menu-item:nth-child(6) {
+    transform: rotate(60deg) translateY(-150px) rotate(300deg);
+    transition-delay: 0s;
+  }
+  
+  #menu:target > .menu-item:nth-child(5) {
+    transform: rotate(20deg) translateY(-155px) rotate(-20deg);
+    transition-delay: 0.1s;
+  }
+  
+  #menu:target > .menu-item:nth-child(3) {
+    transform: rotate(-20deg) translateY(-155px) rotate(20deg);
+    transition-delay: 0.2s;
+  }
+  
+  #menu:target > .menu-item:nth-child(4) {
+    transform: rotate(-60deg) translateY(-150px) rotate(60deg);
+    transition-delay: 0.3s;
+  }
+  
+  .content {
+    position: absolute;
+    text-align: center;
+    margin: -10px 0 0 -30px;
+    top: 65%;
+    left: 50%;
+    font-size: 15px;
+  }
+  

@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Source+Serif+Pro:wght@300;400;600;700&family=Ubuntu:ital,wght@0,400;0,500;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5;
+    line-height: 1.7rem;
+}
+
+
+body{
+font-family: 'Source Serif Pro', serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 1.8rem;
+}
+
+.logo h1{
+    color: #000;
+    font-size: 2.2rem;
+}
+
+.logo span{
+    color: #ff523b;
+    font-size: 2.2rem;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li a:hover{
+    color: #ff523b;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #555;
+}
+
+p{
+    font-size: 1.6rem;
+    color: #000;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-1{
+    flex-basis: 48%;
+    min-width: 300px;
+}
+
+.col-2{
+    flex-basis: 48%;
+    min-width: 300px;
+}
+
+.col-2 img{
+    max-width: 100%;
+    /* padding: 5rem 0; */
+}
+
+.col-1 h1{
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #ff523b;
+    color: #fff;
+    margin-top: 1rem;
+    width: 200px;
+    height: 38px;
+    text-align: center;
+    padding: 0.3rem;
+    border-radius: 25px;
+    margin: 1.2rem auto;
+    font-size: 1.5rem;
+    transition: 0.5s ease-in-out;
+}
+
+.btn:hover{
+    background: transparent;
+    color: #ff523b;
+    border: 1.5px solid #ff523b;
+    font-weight: 400;
+}
+
+.header{
+    background: radial-gradient(#fff,#ffd6d6);
+}
+
+.header .row{
+    margin-top: 25px;
+}
+
+.categories{
+    margin: 50px 0;
+    display: flex;
+}
+
+.col{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.col img{
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid #ff523b;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.categories h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #222;
+}
+
+.categories p{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    padding: 1.5rem 0;
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col h3{
+    color: #444;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.col h3 span{
+    color: #ff523b;
+}
+
+.col-4{
+    flex-basis: 23%;
+    /* padding: 1rem; */
+    min-width: 200px;
+    margin-bottom: 1.5rem;
+    transition: 0.4s ease;
+}
+
+.col-4 img{
+    width: 100%;
+    border: 3px solid #ff523b;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.title{
+    text-align: center;
+    margin: 45px auto;
+    color: #222;
+    font-size: 2rem;
+    border-bottom: 3px solid #ff523b;
+    width: 450px;
+    margin-bottom: 70px;
+}
+
+.small-container p{
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 3.5rem;
+}
+
+.col-4 h4{
+    text-align: left;
+    color: #000;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+ .col-4 .rating{
+    color: #ff523b;
+    text-align: left;
+}
+
+.col-4 p{
+    color: #000;
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.col-4:hover{
+    transform: translateY(-5px);
+}
+
+
+.offer{
+    background: radial-gradient(#fff,#ffd6d6);
+    margin-top: 60px;
+    padding: 20px 0;
+}
+
+.offer-img{
+    padding: 50px;
+    width: 400px;
+}
+
+small{
+    color: #555;
+    font-size: 1.2rem;
+}
+
+.col-2 p{
+    text-align: left;
+    font-size: 1.5rem;
+    padding:0;
+    color: #555;
+}
+
+.col-2 h1{
+    color: #222;
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+}
+
+
+/* ------------------testimonials -------------------- */
+.testimonial{
+    padding-top: 10rem;
+}
+
+.col-3{
+    flex-basis: 30%;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.col-3:hover{
+    transform: translateY(-10px);
+}
+
+.col-3 img{
+    width: 50px;
+    margin-top: 1.5rem;
+    border-radius: 50%;
+    border: 0.8px solid #ff523b;
+}
+.col-3 p{
+    font-size: 1.4rem;
+    text-align: left;
+    color: #555;
+}
+
+.col-3 h3{
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #222;
+}
+
+
+.col-3 .rating{
+    color: #ff523b;
+}
+
+.col-3 span{
+    color: #ff523b;
+}
+
+.col-3 .fa-quote-left{
+    color: #ff523b;
+    font-size: 1.8rem;
+}
+
+
+/* ------------ brands ---------------- */
+
+.brands{
+    margin: 100px auto;
+}
+
+.col-5{
+    width: 120px;
+    flex-basis: 19%;
+}
+
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.col-5 img:hover{
+    filter: grayscale(0);
+}
+
+.footer{
+    background-color: #000;
+    color: #8a8a8a;
+    font-size: 1.4rem;
+    padding: 60px 0 20px;
+}
+
+.footer p{
+    color: #8a8a8a;
+}
+
+.footer h3{
+    color: #fff;
+    margin-bottom: 2.0rem;
+}
+
+.col-6{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1{
+    flex-basis: 30%;
+}
+
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col-1 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-col-3 ,.footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+.app-store{
+    margin-top: 20px;
+}
+
+.app-logo img{
+    width: 140px;
+}
+
+
+.copyright{
+    text-align: center;
+    padding-top: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer hr{
+    background: none;
+    height: 1px;
+    color: #8a8a8a;
+}
+
+.f-logo h1{
+    color: #fff;
+    font-size: 2.2rem;
+    padding-bottom: 1rem;
+}
+
+.f-logo span{
+    color: #ff523b;
+    font-size: 2.2rem;
+    padding-bottom: 1rem;
+
+}

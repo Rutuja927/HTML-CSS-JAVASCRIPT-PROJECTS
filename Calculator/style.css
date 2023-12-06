@@ -1,0 +1,102 @@
+body {
+    background-color: #e0fbfc;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  #calc {
+    width: 350px;
+    height: 450px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    background: #253237;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  #calc-display {
+    margin-bottom: 20px;
+    background: #c2dfe3;
+    box-shadow: inset -5px 5px 4px #abc4c8,
+              inset 5px -5px 4px #d9fafe;
+    height: 35px;
+    width: 300px;
+    padding: 5px;
+    outline: none;
+    border-radius: 10px;
+    text-align: right;
+    font-family: Quicksand;
+    font-size: 14px;
+    color: #1d282b;
+    font-weight: bolder;
+    font-size: 18px;
+    border: none;
+  }
+  
+  .keys {
+    cursor: pointer;
+    outline: none;
+    color: #e0fbfc;
+    background: #253237;
+    box-shadow:  -8px 8px 16px #1d282b,
+               8px -8px 16px #2d3d43;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+  }
+  
+  .keys:active {
+    border: none;
+    background: #253237;
+    box-shadow: inset -8px 8px 16px #1d282b,
+              inset 8px -8px 16px #2d3d43;
+    color: #e0fbfc;
+  }
+  
+  .bottom {
+    position: relative;
+    left: -2px;
+  }
+  
+  #equals {
+    cursor: pointer;
+    outline: none;
+    color: #000;
+    width: 135px;
+    height: 45px;
+    border: none;
+    margin-right: 10px;
+    color: #e0fbfc;
+    background: #253237;
+    box-shadow:  -8px 8px 16px #1d282b,
+    8px -8px 16px #2d3d43;
+  }
+  
+  #equals:active {
+    border: none;
+    background: #253237;
+    box-shadow: inset -8px 8px 16px #1d282b,
+              inset 8px -8px 16px #2d3d43;
+    color: #e0fbfc;
+  }
+  
+  div > h3 {
+    color: #aaa;
+    opacity: 0.56;
+    font-family: Quicksand;
+    letter-spacing: 3px;
+    text-shadow: 1px 4px #111;
+  }
+  
+  .spacer {
+    padding: 50px;
+  }

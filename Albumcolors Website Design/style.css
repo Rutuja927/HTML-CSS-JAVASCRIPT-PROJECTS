@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Signika+Negative:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Signika Negative', sans-serif; */
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    background: #fffaf9;
+}
+
+.main{
+    width: 98%;
+    height: 100%;
+    margin: 0 auto ;
+}
+
+.header{
+    width: 100vw;
+    height: 38vh;
+}
+
+.header h1{
+    font-size: 25.8vh;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav ul li a{
+    color: #8a8a8a;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.search{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    text-transform: uppercase;
+    margin-right: 4.1rem;
+    gap: 5px;
+}
+
+.search i{
+    margin-top: 2px;
+    font-size: 16px;
+    color: #2c2c2c;
+    cursor: pointer;
+}
+
+.search h2{
+    font-size: 16px;
+    color: #2c2c2c;
+    pointer-events: none;
+}
+
+.section{
+    width: 100vw;
+    height: 87vh;
+}
+
+.image{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 50px;
+}
+
+.image i{
+    font-size: 30px;
+    color: #2c2c2c;
+    cursor: pointer;
+}
+
+.section img{
+    width: 550px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.footer{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.footer h3{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #1b1b1b;
+}
+
+.footer h4{
+    margin-right: 4.1rem;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #1b1b1b;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}

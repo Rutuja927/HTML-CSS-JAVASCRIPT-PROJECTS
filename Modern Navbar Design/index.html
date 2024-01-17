@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+        <ul>
+            <li><a href="#" data-text="Home"><img src="images/1.png">Home</a></li>
+            <li><a href="#" data-text="About"><img src="2.png">About</a></li>
+            <li><a href="#" data-text="Services"><img src="images/3.png">Services</a></li>
+            <li><a href="#" data-text="portfolio"><img src="4.png">portfolio</a></li>
+            <li><a href="#" data-text="Team"><img src="images/5.png">Team</a></li>
+            <li><a href="#" data-text="Contact"><img src="images/6.png">Contact</a></li>
+            <div class="cursor"></div>
+        </ul>
+
+    <script>
+        let nav = document.documentElement;
+        nav.addEventListener("mousemove", e => {
+            nav.style.setProperty('--x', e.clientX + "px ");     
+            nav.style.setProperty('--y', e.clientY + "px ");     
+        })
+    </script>
+</body>
+</html>

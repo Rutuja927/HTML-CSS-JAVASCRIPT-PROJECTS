@@ -1,0 +1,417 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Wix Madefor Display';
+}
+
+body{
+    background: #faf2ea;
+}
+
+.container{
+    max-width: 1500px;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+.landing{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255,255,255,0) 56%, rgba(90, 78, 66, 0.05) 87%, rgba(71, 55, 41, 0.4) 100%), url("https://en.bucklerfit.com.br/lp/images/man-doing-push-ups-gym-2-min-1-p-2000.jpg") ;
+    background-size: cover;
+    background-position: center;
+}
+
+.page1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav .logo{
+    text-decoration: none;
+    color: #e6ccb2;
+    letter-spacing: 0.1em;
+}
+
+.landing-text:nth-child(3){
+    color: #e6ccb2;
+}
+
+.landing-text h1{
+    font-size: 5.8rem;
+    color: #ede0d4;
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.landing-text p{
+    font-size: 22px;
+    width: 650px;
+    margin-top: 30px;
+    color: #ede0d4;
+}
+
+.button{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: center; */
+}
+
+.btn{
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #e6ccb2;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #ede0d4;
+    transition: 0.4s ease-in;
+}
+
+.circle{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #e6ccb2;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #e6ccb2;
+    color: #212529;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+}
+
+.btn:hover{
+    background-color: #e6ccb2;
+    border: 2px solid #e6ccb2;
+    color: #212529;
+}
+
+.button:hover .circle {
+    transform: rotate(-45deg);
+}
+
+.navbar{
+    z-index: 5;
+    display: flex;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    position: fixed;
+}
+
+.navbar ul{
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+    padding: 10px 0;
+    border: 1px solid #21252983;
+    border-radius: 50px;
+    backdrop-filter: blur(15px);
+    background-color: #00000050;
+}
+
+.navbar ul li a{
+    font-size: 16px;
+    color: #ede0d4;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover{
+    color: #ede0d4e3;
+}
+
+.btn-primary{
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    background: #c7f9cc;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #212529;
+    transition: 0.4s ease-in;
+}
+
+.btn-primary:hover{
+    background-color: #c7f9cc9c;
+}
+
+
+.page2{
+    width: 100vw;
+    height: auto;
+    border-top: 10px solid #e6ccb2;
+    background: #faf2ea;
+}
+
+.page2 h2{
+    margin-top: 10rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+    color: #212529;
+}
+
+.page2 h1{
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 60px;
+    color: #000;
+}
+
+.build{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.build-card-1{
+    position: relative;
+    width: 470px;
+    height: 550px;
+    background: url("https://en.bucklerfit.com.br/lp/images/Rectangle-6.jpg");
+    border-radius: 10px;
+}
+
+.build-card-1 h1 {
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+    text-align: left;
+    font-size: 40px;
+    color: #e6ccb2;
+}
+.build-card-2{
+    position: relative;
+    width: 470px;
+    height: 550px;
+    background: url("https://en.bucklerfit.com.br/lp/images/bucker-care-p-800.jpg");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.build-card-2 h1 {
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+    text-align: left;
+    font-size: 40px;
+    color: #e6ccb2;
+}
+.build-card-3{
+    position: relative;
+    width: 470px;
+    height: 550px;
+    background: url("https://en.bucklerfit.com.br/lp/images/buckler-gaas-p-800.jpg");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.build-card-3 h1 {
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+    text-align: left;
+    font-size: 40px;
+    color: #e6ccb2;
+}
+
+.button-2{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-2{
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    background-color: #e6ccb2;
+    border: 2px solid #e6ccb2;
+    color: #212529;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.4s ease-in;
+}
+
+.circle-2{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #212529;
+    border: 2px solid #212529;
+    text-align: center;
+    border-radius: 50%;
+    color: #ede0d4;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+}
+
+.btn-2:hover{
+    background-color: #212529;
+    border: 2px solid #212529;
+    color: #ede0d4;
+}
+
+.button-2:hover .circle-2 {
+    transform: rotate(-45deg);
+}
+
+.page3{
+    width: 100vw;
+    height: auto;
+}
+
+.page3 h2{
+    margin-top: 10rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+    color: #212529;
+}
+
+.page3 h1{
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 60px;
+    color: #000;
+}
+
+.machine-card{
+    margin-top: 5rem;
+    width: 100%;
+    height: 600px;
+    border-radius: 25px;
+    background: #ede0d4;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content{
+    padding: 6rem;
+    flex-basis: 50%;
+    color: #212529;
+}
+
+.content h1{
+    text-align: left;
+    color: #212529;
+}
+
+.button-3{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.image{
+    flex-basis: 50%;
+    background: #faf2ea;
+    margin: 25px;
+    border-radius: 16px;
+}
+
+.image img{
+    margin-left: 100px;
+    width: 500px;
+}
+
+.page4{
+    position: relative;
+    background: #212529;
+    width: 100vw;
+    height: 50vh;
+}
+
+.page4 h1{
+    position: absolute;
+    bottom: 0;
+    font-size: 21rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #ede0d4;
+}
+
+.arrow{
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 1px solid #ede0d4; */
+}
+
+ul{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #ede0d4;
+    font-weight: 600;
+}
+
+.fa-arrow-up{
+    margin-top: 50px;
+    font-size: 35px;
+    color: #ede0d4;
+}

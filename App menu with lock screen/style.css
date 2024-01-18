@@ -1,0 +1,763 @@
+/* -- */
+@keyframes blink {
+    from, 25%, to {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(720deg);
+    }
+    to {
+      transform: rotate(1440deg);
+    }
+  }
+  @keyframes bounce {
+    from, 6.66%, 17.66%, 33.33% {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0);
+    }
+    13.33%, 14.33% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -30px, 0) scaleY(1.1);
+    }
+    23.33% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -15px, 0) scaleY(1.05);
+    }
+    26.66% {
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0) scaleY(0.95);
+    }
+    30% {
+      transform: translate3d(0, -4px, 0) scaleY(1.02);
+    }
+  }
+  body {
+    margin: 0px;
+    overflow-x: hidden;
+    padding: 0px;
+  }
+  body::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+  }
+  body::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+  body input, body h1, body h3, body a, body span {
+    color: #5a5a5a;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .background-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .clear-button {
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  .clear-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  #app {
+    background-color: #1e1e1e;
+  }
+  #app.logged-out #app-info {
+    margin-left: 40px;
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  #app.logged-out #app-background {
+    cursor: pointer;
+  }
+  #app.logged-out #sign-in-button-wrapper {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -40px);
+  }
+  #app.logging-in #app-background #app-background-image, #app.verifying-log-in #app-background #app-background-image, #app.log-in-error #app-background #app-background-image {
+    filter: blur(8px);
+    transform: scale(1.2);
+  }
+  #app.logging-in #app-pin-wrapper, #app.log-in-error #app-pin-wrapper {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  #app.verifying-log-in #app-loading-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  #app.log-in-error #app-pin-wrapper #app-pin .app-pin-digit {
+    background-color: rgba(239, 83, 80, 0.05);
+    border-color: rgba(239, 83, 80, 0.5);
+  }
+  #app.logged-in #app-menu {
+    height: auto;
+    overflow: initial;
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0%);
+  }
+  #app .scrollable-component {
+    cursor: grab;
+    overflow: auto;
+    user-select: none;
+    width: 100%;
+  }
+  #app .scrollable-component:active {
+    cursor: grabbing;
+  }
+  #app .scrollable-component::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+  }
+  #app #app-loading-icon {
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    transition: opacity 250ms, transform 250ms;
+    z-index: 2;
+  }
+  #app #app-loading-icon i {
+    animation: 2s spin ease-in-out infinite;
+    color: white;
+    font-size: 2em;
+  }
+  #app #app-background {
+    height: 100%;
+    left: 0px;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+  }
+  #app #app-background #app-background-image {
+    background-image: url("https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2076&q=80");
+    height: 100%;
+    transition: filter 250ms, transform 250ms;
+    width: 100%;
+  }
+  #app #app-info {
+    bottom: 0px;
+    left: 0px;
+    margin: 40px;
+    margin-left: 0px;
+    opacity: 0;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: margin 250ms, opacity 250ms, transform 250ms;
+    z-index: 2;
+  }
+  #app .user-status-button {
+    cursor: pointer;
+    margin-top: 10px;
+    outline: none;
+    padding: 10px;
+    width: 100px;
+  }
+  #app .user-status-button i {
+    color: whitesmoke;
+    font-size: 1.25em;
+  }
+  #app #sign-in-button-wrapper {
+    bottom: 0px;
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, 40px);
+    transition: opacity 250ms, transform 250ms;
+    z-index: 2;
+  }
+  #app #sign-in-button-wrapper #sign-in-button:not(:hover) {
+    animation: bounce 3s infinite;
+    animation-delay: 3s;
+  }
+  #app .info {
+    align-items: flex-end;
+    display: flex;
+  }
+  #app .info .time {
+    color: whitesmoke;
+    font-size: 6em;
+    height: 80px;
+    line-height: 80px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  #app .info .weather {
+    display: inline-flex;
+    height: 20px;
+    margin-bottom: 6px;
+    margin-left: 20px;
+  }
+  #app .info .weather i, #app .info .weather span {
+    align-items: center;
+    display: inline-flex;
+  }
+  #app .info .weather i {
+    color: #fdd835;
+    font-size: 0.9em;
+  }
+  #app .info .weather span {
+    color: white;
+  }
+  #app .info .weather .weather-type {
+    height: 20px;
+  }
+  #app .info .weather .weather-temperature-value {
+    font-size: 1.5em;
+    height: 20px;
+    margin-left: 5px;
+  }
+  #app .info .weather .weather-temperature-unit {
+    align-items: flex-start;
+    font-size: 0.8em;
+    margin-left: 3px;
+  }
+  #app .reminder {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  #app .reminder i, #app .reminder div {
+    display: inline-flex;
+  }
+  #app .reminder i {
+    color: whitesmoke;
+    font-size: 0.8em;
+    height: 12px;
+    line-height: 12px;
+  }
+  #app .reminder span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1em;
+  }
+  #app .reminder .reminder-icon {
+    align-items: center;
+    height: 20px;
+  }
+  #app .reminder .reminder-time {
+    align-items: flex-end;
+    color: #1e1e1e;
+    font-size: 0.8em;
+    height: 20px;
+  }
+  #app #quick-nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    overflow: auto;
+    padding-bottom: 5px;
+    width: 100%;
+    z-index: 3;
+  }
+  #app #quick-nav .quick-nav-item {
+    padding: 10px 20px;
+  }
+  #app #quick-nav .quick-nav-item:last-of-type {
+    margin-right: 10px;
+  }
+  #app #quick-nav .quick-nav-item .quick-nav-item-label {
+    color: whitesmoke;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  }
+  #app #youtube-link {
+    align-items: center;
+    display: inline-flex;
+    gap: 5px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  #app #youtube-link i, #app #youtube-link span {
+    height: 20px;
+    line-height: 20px;
+  }
+  #app #youtube-link i {
+    color: #ef5350;
+  }
+  #app #youtube-link span {
+    color: white;
+  }
+  #app .menu-section {
+    margin-top: 60px;
+  }
+  #app .menu-section .menu-section-title {
+    align-items: center;
+    display: flex;
+    gap: 6px;
+  }
+  #app .menu-section .menu-section-title i, #app .menu-section .menu-section-title span {
+    color: whitesmoke;
+  }
+  #app .menu-section .menu-section-title i {
+    font-size: 1em;
+  }
+  #app .menu-section .menu-section-title .menu-section-title-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.25em;
+  }
+  #app .menu-section .menu-section-content {
+    margin-top: 15px;
+    padding-top: 5px;
+  }
+  #app #restaurants-section .menu-section-content {
+    display: flex;
+    gap: 1em;
+  }
+  #app #restaurants-section .menu-section-content .restaurant-card {
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    height: 14vw;
+    max-height: 240px;
+    position: relative;
+    transition: transform 250ms;
+    width: 25%;
+  }
+  #app #restaurants-section .menu-section-content .restaurant-card:hover {
+    transform: translateY(-5px);
+  }
+  #app #restaurants-section .menu-section-content .restaurant-card:hover .restaurant-card-content .restaurant-card-content-items {
+    margin-bottom: 30px;
+  }
+  #app #restaurants-section .menu-section-content .restaurant-card .restaurant-card-content {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  #app #restaurants-section .menu-section-content .restaurant-card .restaurant-card-content .restaurant-card-content-items {
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    transition: margin 250ms;
+  }
+  #app #restaurants-section .menu-section-content .restaurant-card .restaurant-card-content .restaurant-card-content-items .restaurant-card-title {
+    color: whitesmoke;
+    font-size: 1.5em;
+  }
+  #app #restaurants-section .menu-section-content .restaurant-card .restaurant-card-content .restaurant-card-content-items .restaurant-card-desc {
+    color: #42a5f5;
+    font-size: 0.9em;
+  }
+  #app #weather-section .menu-section-content {
+    display: flex;
+    gap: 1em;
+    padding: 5px 0px;
+    width: 100%;
+  }
+  #app #weather-section .menu-section-content .day-card {
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    height: 8vw;
+    max-height: 160px;
+    min-height: 140px;
+    min-width: 180px;
+    position: relative;
+    transition: transform 250ms;
+    width: calc(100% / 7);
+  }
+  #app #weather-section .menu-section-content .day-card:last-of-type {
+    margin-right: 5px;
+  }
+  #app #weather-section .menu-section-content .day-card .day-card-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 20px);
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+  #app #weather-section .menu-section-content .day-card .day-card-content i, #app #weather-section .menu-section-content .day-card .day-card-content span {
+    color: whitesmoke;
+    text-align: center;
+  }
+  #app #weather-section .menu-section-content .day-card .day-card-content .day-weather-temperature {
+    align-items: flex-start;
+    display: flex;
+    font-size: 0.9em;
+    justify-content: center;
+  }
+  #app #weather-section .menu-section-content .day-card .day-card-content .day-weather-temperature .day-weather-temperature-unit {
+    font-size: 0.8em;
+    margin-left: 3px;
+  }
+  #app #weather-section .menu-section-content .day-card .day-card-content .day-weather-icon {
+    font-size: 3.5em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  #app #weather-section .menu-section-content .day-card .day-card-content .day-weather-icon.sunny {
+    color: #fdd835;
+  }
+  #app #weather-section .menu-section-content .day-card .day-card-content .day-weather-icon.rainy, #app #weather-section .menu-section-content .day-card .day-card-content .day-weather-icon.stormy {
+    color: #42a5f5;
+  }
+  #app #weather-section .menu-section-content .day-card .day-card-content .day-name {
+    font-size: 0.9em;
+    text-transform: uppercase;
+  }
+  #app #tools-section .menu-section-content {
+    display: flex;
+    gap: 1em;
+  }
+  #app #tools-section .menu-section-content .tool-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    height: 8vw;
+    max-height: 160px;
+    min-height: 140px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 250ms;
+    width: calc(100% / 6);
+  }
+  #app #tools-section .menu-section-content .tool-card:hover {
+    transform: translateY(-5px);
+  }
+  #app #tools-section .menu-section-content .tool-card:hover .tool-card-background {
+    filter: grayscale(25%);
+  }
+  #app #tools-section .menu-section-content .tool-card .tool-card-background {
+    border-radius: 10px;
+    filter: grayscale(100%);
+    height: 100%;
+    left: 0px;
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    transition: filter 250ms;
+    width: 100%;
+  }
+  #app #tools-section .menu-section-content .tool-card .tool-card-content {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 40px);
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    width: calc(100% - 40px);
+    z-index: 2;
+  }
+  #app #tools-section .menu-section-content .tool-card .tool-card-content .tool-card-content-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  #app #tools-section .menu-section-content .tool-card .tool-card-content .tool-card-content-header .tool-card-label {
+    color: #42a5f5;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+  #app #tools-section .menu-section-content .tool-card .tool-card-content .tool-card-content-header .tool-card-name {
+    color: whitesmoke;
+    font-size: 1.25em;
+  }
+  #app #tools-section .menu-section-content .tool-card .tool-card-content .tool-card-icon {
+    color: whitesmoke;
+    font-size: 2em;
+  }
+  #app #movies-section .menu-section-content {
+    display: flex;
+    gap: 1em;
+  }
+  #app #movies-section .menu-section-content #movie-card-1 .movie-card-content {
+    background: linear-gradient(to top, rgba(57, 73, 171, 0.4), transparent, rgba(0, 0, 0, 0.4));
+  }
+  #app #movies-section .menu-section-content #movie-card-2 .movie-card-content {
+    background: linear-gradient(to top, rgba(103, 58, 183, 0.4), transparent, rgba(0, 0, 0, 0.4));
+  }
+  #app #movies-section .menu-section-content #movie-card-3 .movie-card-content {
+    background: linear-gradient(to top, rgba(239, 83, 80, 0.4), transparent, rgba(0, 0, 0, 0.4));
+  }
+  #app #movies-section .menu-section-content #movie-card-4 .movie-card-content {
+    background: linear-gradient(to top, rgba(42, 252, 152, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+  }
+  #app #movies-section .menu-section-content .movie-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    height: 40vw;
+    max-height: 600px;
+    min-height: 460px;
+    min-width: 260px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 250ms;
+    width: calc(100% / 4);
+  }
+  #app #movies-section .menu-section-content .movie-card:hover {
+    transform: translateY(-5px);
+  }
+  #app #movies-section .menu-section-content .movie-card:hover .movie-card-background {
+    transform: scale(1.05);
+  }
+  #app #movies-section .menu-section-content .movie-card:hover .movie-card-content i {
+    transform: translate(-20%, -20%) scale(1.2);
+  }
+  #app #movies-section .menu-section-content .movie-card .movie-card-background {
+    border-radius: 10px;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: transform 250ms;
+    width: 100%;
+    z-index: 1;
+  }
+  #app #movies-section .menu-section-content .movie-card .movie-card-content {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+    border-radius: 10px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  #app #movies-section .menu-section-content .movie-card .movie-card-content .movie-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 30px;
+  }
+  #app #movies-section .menu-section-content .movie-card .movie-card-content .movie-card-info span {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  #app #movies-section .menu-section-content .movie-card .movie-card-content .movie-card-info .movie-card-title {
+    color: whitesmoke;
+    font-size: 2em;
+  }
+  #app #movies-section .menu-section-content .movie-card .movie-card-content .movie-card-info .movie-card-desc {
+    color: #c8c8c8;
+    font-size: 0.9em;
+  }
+  #app #movies-section .menu-section-content .movie-card .movie-card-content i {
+    bottom: 0px;
+    color: whitesmoke;
+    font-size: 5em;
+    padding: 30px;
+    position: absolute;
+    right: 0px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 250ms;
+  }
+  #app #app-pin-wrapper {
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -30%) scale(0.8);
+    transition: opacity 250ms, transform 250ms;
+    z-index: 2;
+  }
+  #app #app-pin-wrapper #app-pin-label {
+    color: whitesmoke;
+    font-size: 0.9em;
+    margin: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  #app #app-pin-wrapper #app-pin-label #app-pin-cancel-text {
+    cursor: pointer;
+    margin-left: 2px;
+  }
+  #app #app-pin-wrapper #app-pin-label #app-pin-cancel-text:hover {
+    text-decoration: underline;
+  }
+  #app #app-pin-wrapper #app-pin-label #app-pin-error-text {
+    color: #ef5350;
+  }
+  #app #app-pin-wrapper #app-pin-hidden-input {
+    background-color: transparent;
+    border: none;
+    height: 0px;
+    outline: none;
+    pointer-events: none;
+    position: absolute;
+    width: 0px;
+  }
+  #app #app-pin-wrapper #app-pin {
+    display: flex;
+    gap: 10px;
+  }
+  #app #app-pin-wrapper #app-pin .app-pin-digit {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.06);
+    display: inline-flex;
+    font-size: 3em;
+    height: 80px;
+    justify-content: center;
+    position: relative;
+    transition: background-color 250ms, border-color 250ms;
+    width: 60px;
+  }
+  #app #app-pin-wrapper #app-pin .app-pin-digit:after, #app #app-pin-wrapper #app-pin .app-pin-digit:before {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.06);
+    content: "";
+    position: absolute;
+    transition: opacity 250ms, transform 250ms;
+    z-index: 2;
+  }
+  #app #app-pin-wrapper #app-pin .app-pin-digit:before {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    bottom: 0px;
+    height: 3px;
+    left: 15%;
+    opacity: 0;
+    transform: translateY(0px);
+    width: 70%;
+  }
+  #app #app-pin-wrapper #app-pin .app-pin-digit:after {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    height: 20px;
+    opacity: 0;
+    transform: scale(0.25);
+    width: 20px;
+  }
+  #app #app-pin-wrapper #app-pin .app-pin-digit.focused:before {
+    animation: blink 2s ease-in-out infinite;
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  #app #app-pin-wrapper #app-pin .app-pin-digit.hidden:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  #app #app-pin-wrapper #app-pin .app-pin-digit.hidden .app-pin-digit-value {
+    opacity: 0;
+    transform: scale(0.25);
+  }
+  #app #app-pin-wrapper #app-pin .app-pin-digit .app-pin-digit-value {
+    color: whitesmoke;
+    transition: opacity 250ms, transform 250ms;
+  }
+  #app #app-menu {
+    height: 100vh;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: relative;
+    transform: translateY(-10%);
+    transition: opacity 250ms, transform 250ms;
+    z-index: 2;
+  }
+  #app #app-menu #app-menu-content-wrapper {
+    background: linear-gradient(to bottom, transparent, #1e1e1e);
+    margin-top: 30vh;
+    min-height: 80vh;
+    padding: 80px;
+    padding-top: 0px;
+  }
+  #app #app-menu #app-menu-content-wrapper #app-menu-content {
+    margin: auto;
+    max-width: 1600px;
+    position: relative;
+  }
+  #app #app-menu #app-menu-content-wrapper #app-menu-content #app-menu-content-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 1300px) {
+    #app.logged-out #sign-in-button-wrapper {
+      transform: translate(-40px, 0px);
+    }
+    #app #sign-in-button-wrapper {
+      bottom: 40px;
+      left: auto;
+      right: 0px;
+      transform: translate(40px, 0px);
+    }
+    #app #app-menu #app-menu-content-wrapper {
+      padding: 30px;
+    }
+    #app #app-menu #app-menu-content-wrapper #app-menu-content #restaurants-section .menu-section-content {
+      flex-wrap: wrap;
+    }
+    #app #app-menu #app-menu-content-wrapper #app-menu-content #restaurants-section .menu-section-content .restaurant-card {
+      height: 30vw;
+      max-height: 300px;
+      position: relative;
+      width: calc(50% - 0.5em);
+    }
+    #app #app-menu #app-menu-content-wrapper #app-menu-content #tools-section .menu-section-content {
+      flex-wrap: wrap;
+    }
+    #app #app-menu #app-menu-content-wrapper #app-menu-content #tools-section .menu-section-content .tool-card {
+      width: calc(33.33% - 0.69em);
+    }
+  }
+  @media (max-width: 600px) {
+    #app .info .time {
+      font-size: 4em;
+      height: 60px;
+      line-height: 60px;
+    }
+    #app .user-status-button {
+      width: 60px;
+    }
+    #app #app-menu #app-menu-content-wrapper #app-menu-content #restaurants-section .menu-section-content {
+      flex-direction: column;
+    }
+    #app #app-menu #app-menu-content-wrapper #app-menu-content #restaurants-section .menu-section-content .restaurant-card {
+      height: 40vw;
+      position: relative;
+      width: 100%;
+    }
+    #app #app-menu #app-menu-content-wrapper #app-menu-content #tools-section .menu-section-content {
+      flex-wrap: wrap;
+    }
+    #app #app-menu #app-menu-content-wrapper #app-menu-content #tools-section .menu-section-content .tool-card {
+      width: calc(50% - 0.5em);
+    }
+  }
+  @media (max-width: 400px) {
+    #app #app-menu #app-menu-content-wrapper #app-menu-content #tools-section .menu-section-content {
+      flex-wrap: wrap;
+    }
+    #app #app-menu #app-menu-content-wrapper #app-menu-content #tools-section .menu-section-content .tool-card {
+      width: 100%;
+    }
+  }

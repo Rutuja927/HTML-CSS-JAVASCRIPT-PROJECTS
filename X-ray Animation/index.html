@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - X-ray me (SVG Experiment)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
+  <rect width="100%" height="100%" fill="#E7E7E8"/>
+  <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/a.svg" width="100%" height="100%" />
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="mask">
+      <circle id="mask-circle" cx="50%" cy="50%" r="8%" style="fill: #ffffff"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#mask)">
+    <rect width="100%" height="100%" fill="#272730"/>
+    <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/b.svg" width="100%" height="100%" />
+  </g>
+  <circle id="circle-shadow" cx="50%" cy="50%" r="8%" style="stroke: #fff; fill: transparent; stroke-width: 5;" />
+</svg>
+
+<div>
+  SVG <del>Masking</del> <ins>clip-path</ins> Experiment.<br/>
+  <span>Move your mouse/finger over the image.</span>
+</div>
+
+<a href="https://twitter.com/pixelia_me" target="_blank">@pixelia_me</a>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
